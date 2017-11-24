@@ -5,6 +5,9 @@
 # Difficulty: easy.
 
 def count_vowels(string)
+  count=0
+  while count<string.length
+    if string[count]="a" || 
 end
 
 # These are tests to check that your code is working. After writing
