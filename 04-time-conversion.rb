@@ -4,6 +4,17 @@
 # Difficulty: easy.
 
 def time_conversion(minutes)
+  hours=minutes/60
+  remainder=minutes%60
+  
+  if remainder>0 && remainder>9
+    return "#{hours.to_s}:#{minutes.to_s}"
+  elseif remainder>0
+    return "#{hours.to_s}:0#{minutes.to_s}"
+  else
+    return "#{hours.to_s}:00"
+  end
+  
 end
 
 # These are tests to check that your code is working. After writing
