@@ -6,6 +6,17 @@
 # Difficulty: easy.
 
 def reverse(string)
+  
+  num=0
+  output=""
+  
+  while num<string.length
+    output.upshift(string[num])
+    num+=1
+  end
+  
+  return output
+  
 end
 
 # These are tests to check that your code is working. After writing
