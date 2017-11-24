@@ -5,9 +5,15 @@
 # Difficulty: easy.
 
 def count_vowels(string)
+  num=0
   count=0
-  while count<string.length
-    if string[count]="a" || 
+  while num<string.length
+    if string[num]="a" || string[num]="e" || string[num]="i" ||string[num]="o"||string[num]="u"
+      count+=1
+    end
+    num+=1
+  end
+  return count
 end
 
 # These are tests to check that your code is working. After writing
