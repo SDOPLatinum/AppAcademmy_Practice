@@ -4,6 +4,14 @@
 # Difficulty: easy.
 
 def sum_nums(num)
+  output=1
+  
+  while num>1
+    output+=num
+    num-=1
+  end
+  
+  return output
 end
 
 # These are tests to check that your code is working. After writing
