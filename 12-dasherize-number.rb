@@ -8,6 +8,34 @@
 # Difficulty: medium.
 
 def dasherize_number(num)
+  num=num.to_s
+  #num=num.split
+  tester=0
+  
+  while tester<num.length
+    if (num[tester].to_i)%2==1
+      if (num[tester+1].to_i)%2==0
+        num[tester]="-#{num[tester]}-"
+        tester+=4
+      else
+        num[tester]="-#{num[tester]}"
+        tester+=2
+      end
+    else
+      tester+=1
+    end
+  end
+  
+  if num[0]=="-"
+    num[0]=""
+  end
+  
+  if num[(num.length-1)]=="-"
+    num[(num.length-1)]=""
+  end
+  
+  return num#.join
+  
 end
 
 # These are tests to check that your code is working. After writing
@@ -17,6 +45,7 @@ puts(
   'dasherize_number(203) == "20-3": ' +
   (dasherize_number(203) == '20-3').to_s
 )
+puts dasherize_number(203)
 puts(
   'dasherize_number(303) == "3-0-3": ' +
   (dasherize_number(303) == '3-0-3').to_s
@@ -25,7 +54,9 @@ puts(
   'dasherize_number(333) == "3-3-3": ' +
   (dasherize_number(333) == '3-3-3').to_s
 )
+puts dasherize_number(333)
 puts(
   'dasherize_number(3223) == "3-22-3": ' +
   (dasherize_number(3223) == '3-22-3').to_s
-)
+  )
+puts dasherize_number(3223)
