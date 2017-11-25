@@ -5,6 +5,29 @@
 # Difficulty: medium.
 
 def nearby_az(string)
+  
+  position_a=0
+  position_z=0
+  count=0
+  
+  while count<string.length
+    if string[count]=="a"
+      position_a=count
+      count+=1
+    elsif string[count]=="z"
+      position_z=count
+      count+=1
+    else
+      count+=1
+    end
+  end
+  
+  if (position_z-position_a)>0 && (position_z-position_a)<4
+    return true
+  else
+    return false
+  end
+    
 end
 
 # These are tests to check that your code is working. After writing
