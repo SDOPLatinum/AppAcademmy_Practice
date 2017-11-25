@@ -6,6 +6,22 @@
 # Difficulty: easy.
 
 def palindrome?(string)
+  
+  
+  num=0
+  output=""
+  
+  while num<string.length
+    output.upshift(string[num])
+    num+=1
+  end
+  
+  if string==output
+    return true
+  else
+    return false
+  end
+  
 end
 
 # These are tests to check that your code is working. After writing
