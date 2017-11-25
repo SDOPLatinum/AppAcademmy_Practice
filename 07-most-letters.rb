@@ -10,7 +10,7 @@ def nearby_az(string)
   position_z=0
   count=0
   
-  while count<string.length
+  while count<string.length && !((position_z-position_a)>0 && (position_z-position_a)<4)
     if string[count]=="a"
       position_a=count
       count+=1
