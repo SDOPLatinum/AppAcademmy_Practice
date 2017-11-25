@@ -1,33 +1,36 @@
-# Write a method that will take a string as input, and return a new
-# string with the same letters in reverse order.
+# Write a method that takes in a string of lowercase letters and
+# spaces, producing a new string that capitalizes the first letter of
+# each word.
 #
-# Don't use String's reverse method; that would be too simple.
+# You'll want to use the `split` and `join` methods. Also, the String
+# method `upcase`, which converts a string to all upper case will be
+# helpful.
 #
-# Difficulty: easy.
+# Difficulty: medium.
 
-def reverse(string)
-  
-  num=0
-  output=[]
-  
-  while num<string.length
-    output.unshift(string[num])
-    num+=1
-  end
-  
-  return output.join
-  
+def capitalize_words(string)
+    string=string.split
+    length=string.length
+    idx=0
+    
+    while idx<length
+        (string[idx])[0] = (string[idx])[0].upcase
+        idx+=1
+    end
+    
+    return string.join(" ")
+    
 end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 
 puts(
-  'reverse("abc") == "cba": ' + (reverse("abc") == "cba").to_s
+  'capitalize_words("this is a sentence") == "This Is A Sentence": ' +
+  (capitalize_words("this is a sentence") == "This Is A Sentence").to_s
 )
+
 puts(
-  'reverse("a") == "a": ' + (reverse("a") == "a").to_s
-)
-puts(
-  'reverse("") == "": ' + (reverse("") == "").to_s
+  'capitalize_words("mike bloomfield") == "Mike Bloomfield": ' +
+  (capitalize_words("mike bloomfield") == "Mike Bloomfield").to_s
 )
