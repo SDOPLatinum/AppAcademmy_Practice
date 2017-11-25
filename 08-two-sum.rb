@@ -6,35 +6,30 @@
 
 def two_sum(nums)
   
-  partner1=0
-  partner2=0
-  summation=parnter1+partner2
-  output=[partner1, partner2]
+  stable=0
+  moving=0
   
-  while partner2<nums.length
+  while moving<nums.length
     
-    if summation==0
-      return output
+    if nums[stable]+nums[moving]==0
+      return [stable, moving]
     else
-      partner2+=1
+      moving+=1
     end
     
-    if partner2==nums.length-1 && partner1<nums.length-1
-      partner2=0
-      partner1+=1
-    else 
-      partner2+=1
+    if moving==nums.length && stable<nums.length-1
+      moving=0
+      stable+=1
+    elsif moving==nums.length-1 && stable==nums.length-1
+      return nil
     end
     
   end
-  
-  return output
   
 end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
-
 puts(
   'two_sum([1, 3, 5, -3]) == [1, 3]: ' + (two_sum([1, 3, 5, -3]) == [1, 3]).to_s
 )
