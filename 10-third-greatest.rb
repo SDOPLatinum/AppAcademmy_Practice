@@ -28,6 +28,10 @@ def third_greatest(nums)
       stable+=1
     end
     
+    if stable==nums.length
+      return "This number array does not have a third greatest number."
+    end
+    
   end
   
 end
