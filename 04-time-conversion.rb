@@ -8,9 +8,9 @@ def time_conversion(minutes)
   remainder=minutes%60
   
   if remainder>9
-    return "#{hours.to_s}:#{minutes.to_s}"
+    return "#{hours.to_s}:#{remainder.to_s}"
   elsif remainder>0
-    return "#{hours.to_s}:0#{minutes.to_s}"
+    return "#{hours.to_s}:0#{remainder.to_s}"
   else
     return "#{hours.to_s}:00"
   end
