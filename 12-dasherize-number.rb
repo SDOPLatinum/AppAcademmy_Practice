@@ -9,7 +9,6 @@
 
 def dasherize_number(num)
   num=num.to_s
-  #num=num.split
   tester=0
   
   while tester<num.length
@@ -34,7 +33,7 @@ def dasherize_number(num)
     num[(num.length-1)]=""
   end
   
-  return num#.join
+  return num
   
 end
 
