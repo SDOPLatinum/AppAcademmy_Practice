@@ -9,18 +9,14 @@ def palindrome?(string)
   
   
   num=0
-  output=""
+  output=[]
   
   while num<string.length
-    output.upshift(string[num])
+    output.unshift(string[num])
     num+=1
   end
   
-  if string==output
-    return true
-  else
-    return false
-  end
+  return string==output.join
   
 end
 
