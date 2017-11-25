@@ -5,6 +5,37 @@
 # Difficulty: medium.
 
 def third_greatest(nums)
+  
+  tester=0
+  testee=0
+  summation=nums[tester]-nums[testee]
+  count=0
+  
+  while testee<nums.length
+    
+    if summation<0
+      count+=1
+      testee+=1
+    else
+      testee+=1
+    end
+    
+    if count==2
+      return nums[testee]
+    end
+    
+    if testee==nums.length
+      count=0
+      testee=0
+      tester+=1
+    end
+    
+    if tester==nums.length
+      return "This number array does not have a thrid greatest number."
+    end
+    
+  end
+  
 end
 
 # These are tests to check that your code is working. After writing
