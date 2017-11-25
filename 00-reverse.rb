@@ -8,14 +8,14 @@
 def reverse(string)
   
   num=0
-  output=""
+  output=[]
   
   while num<string.length
     output.upshift(string[num])
     num+=1
   end
   
-  return output
+  return output.join
   
 end
 
