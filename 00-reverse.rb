@@ -11,7 +11,7 @@ def reverse(string)
   output=[]
   
   while num<string.length
-    output.upshift(string[num])
+    output.unshift(string[num])
     num+=1
   end
   
